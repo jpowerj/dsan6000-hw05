@@ -7,3 +7,5 @@ data/*.parquet
 data/*.pkl
 __pycache__
 __pycache__/*
+demo.parquet
+lbn.parquet

@@ -79,11 +79,11 @@ Note that this and other `git` commands interacting with your GitHub repository 
 
 To create this Access Token, **follow the instructions [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)**: you can just check off all permissions (since this is a case of you "granting" permissions to yourself – you would need to worry about specific permissions if you were granting access to a coworker on a project, for example!), and you don't need to choose an expiration date for this Access Token (though you can for extra account security).
 
-## HW4 Task: Optimizing Queries on ACLED (Armed Conflict Location and Event Data) Events
+## HW5 Task: Locally-Caching Queries on ACLED (Armed Conflict Location and Event Data) Events
 
 For this assignment you will be working with a dataset (that Jeff contributed to at some point long ago!), the full set of publicly-available [ACLED events](https://acleddata.com/) involving civilian casualties, spanning from January 1, 1997 to September 26, 2025<a name='fn1loc'></a><sup>[1](#fn1)</sup>.
 
-This dataset was chosen for this assignment because it helps illustrate the **OnLine Analytics Processing (OLAP) "stage"** that we're moving towards in this second unit of the course: although the event information recorded in this dataset may stream **into** ACLED's database row-by-row, when it comes time to **analyze** it
+This dataset was chosen for this assignment (and the previous) because it helps illustrate the **OnLine Analytics Processing (OLAP) "stage"** that we're moving towards in this second unit of the course: although the event information recorded in this dataset may stream **into** ACLED's database row-by-row, when it comes time to **analyze** it
 
 > [!NOTE]
 > ### Setting Up Your `uv` Environment
@@ -128,7 +128,7 @@ This dataset was chosen for this assignment because it helps illustrate the **On
 
 The remaining instructions are given in a single Jupyter notebook:
 
-* In `DSAN6000_HW5.ipynb` you will get your first hands-on experience with the **internals** of the `.parquet` columnar data storage format, especially its use of **Run-Length Encoding (RLE) compression** for massive file-size reduction. Then you will **take advantage of** these `.parquet` enhancements (relative to `.csv`), by querying a `.parquet` file *directly* from within an S3 bucket, loading only the data needed to execute the query (a massive improvement over the necessity, with `.csv` files, to load the entire file before issuing queries).
+* In `DSAN6000_HW5.ipynb` you will learn some more advanced uses of the `.parquet` format (relative to HW4), then you will **take advantage of** these additional features in querying a `.parquet` file *directly* from within an S3 bucket, loading only the data needed to execute the query (a massive improvement over the necessity, with `.csv` files, to load the entire file before issuing queries). Finally, you will cache the resulting data into local RAM using Polars!
 
 ## HW5 Submission
 

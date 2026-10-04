@@ -1,6 +1,6 @@
 # DSAN 6000 Homework 5: "Freezing" Python Computations with Polars
 
-**Due Friday, October 9, 11:59pm EDT**
+**Due Sunday, October 11, 11:59pm EDT**
 
 > [!WARNING]
 > If you have cloned the repository **template** from the `https://github.com/jpowerj/dsan6000-hw05` URL, you are **not starting the assignment correctly!** That is, if the command you used to clone the repo onto EC2 looks like:
